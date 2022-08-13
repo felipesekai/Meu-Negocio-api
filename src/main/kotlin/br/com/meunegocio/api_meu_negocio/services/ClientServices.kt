@@ -21,6 +21,7 @@ class ClientServices {
         val entity = DozerMapper.parseObject(client, Client::class.java)
         val clientVo = DozerMapper.parseObject(clientRepository.save(entity), ClientVo::class.java)
         return  clientVo
+
     }
 
     fun findById (id: Long): ClientVo {
